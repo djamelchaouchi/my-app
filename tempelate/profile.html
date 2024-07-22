@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+<!-- Preloader -->
+<div id="preloader" style="display: none;">
+	<div class="spinner"></div>
+</div>
+<!-- Preloader end-->
+
+<!-- Header -->
+<header class="header">
+	<div class="container">
+		<div class="main-bar">
+			<div class="left-content">
+				<a href="javascript:void(0);" class="back-btn">
+					<i class="fa-solid fa-arrow-left"></i>
+				</a>
+				<h4 class="title mb-0">Profile</h4>
+			</div>
+			<div class="mid-content">
+			</div>
+			<div class="right-content">
+				<a href="{% url 'setting' %}" class="bell-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="inherit" xmlns:v="https://vecta.io/nano"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.44-.25c-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65a7.93 7.93 0 0 0-.07.98 7.93 7.93 0 0 0 .07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .44.25c.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73s-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13L6.5 12c0-.2.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8a4 4 0 1 0 0 8 4 4 0 1 0 0-8zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg>
+				</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- Header End -->
+
+<!-- Page Content -->
+<div class="page-content">
+	<div class="container profile-area">
+		<div class="profile">
+			<div class="main-profile">
+				<div class="left-content">
+					<span> {{user.username}}</span>
+					<h5 class="mt-1"> {{user.first_name}} {{user.last_name}}</h5>
+					<h6 class="text-primary font-w400">Photographer</h6>
+				</div>
+				<div class="right-content">
+					<div class="upload-box">
+						<img src="{% static 'assets/images/stories/pic1.png' %}" alt="/">
+						<a href="{% url 'edit-profile' %}" class="upload-btn"><i class="fa-solid fa-pencil"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="info">
+				<h6>About me</h6>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do sum sit ematons ectetur adipiscing elit, sed do sum sit emat.
+				</p>
+			</div>
+		</div>			
+		<div class="contant-section">
+			<div class="social-bar">
+				<ul>
+					<li class="active">
+						<a href="javascript:void(0);">
+							<h4>52</h4>	
+							<span>Post</span>
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'social-friends' %}">
+							<h4>250</h4>	
+							<span>Following</span>
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'social-friends' %}">
+							<h4>4.5k</h4>	
+							<span>Followers</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="title-bar my-2">
+				<h6 class="mb-0">My Posts</h6>
+				<div class="dz-tab style-2">
+					<ul class="nav nav-tabs" id="myTab3" role="tablist">
+					<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="home-tab3" data-bs-toggle="tab" data-bs-target="#home-tab-pane3" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 3H3V10H10V3Z" stroke="var(--primary)" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M21 3H14V10H21V3Z" stroke="var(--primary)" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M21 14H14V21H21V14Z" stroke="var(--primary)" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M10 14H3V21H10V14Z" stroke="var(--primary)" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="profile-tab3" data-bs-toggle="tab" data-bs-target="#profile-tab-pane3" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false" tabindex="-1">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8 6H21" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M8 12H21" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M8 18H21" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M3 6H3.01" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M3 12H3.01" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M3 18H3.01" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</button>
+					</li>
+				</ul></div>
+			</div>
+			<div class="tab-content" id="myTabContent3">
+				<div class="tab-pane fade show active" id="home-tab-pane3" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+					<div class="dz-lightgallery style-2" id="lightgallery">
+						<a class="gallery-box" src="{% static 'assets/images/post/pic1.png' %}" data-lg-id="3a8699bc-5dee-49e6-a784-423b52db16ab">
+							<img src="{% static 'assets/images/post/pic1.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic2.png' %}" data-lg-id="15d6f398-a8ea-4539-869b-7863503ee13c">
+							<img src="{% static 'assets/images/post/pic2.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic3.png' %}" data-lg-id="41d1b3a5-94dc-43f6-96c9-bdf0756e6045">
+							<img src="{% static 'assets/images/post/pic3.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic4.png' %}" data-lg-id="6356ead6-777b-4a93-b9f3-6e208b061838">
+							<img src="{% static 'assets/images/post/pic4.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic5.png' %}" data-lg-id="587d0c80-8b73-41fd-b3c8-740f878a0996">
+							<img src="{% static 'assets/images/post/pic5.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic6.png' %}" data-lg-id="56ed3d40-01e4-46f5-8ddf-ba19060c2890">
+							<img src="{% static 'assets/images/post/pic6.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic7.png' %}" data-lg-id="8d885dda-d545-4d3d-80c2-8efac99dbe26">
+							<img src="{% static 'assets/images/post/pic7.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic8.png' %}" data-lg-id="312cf7d7-fa2d-4514-8401-caaa70a21a36">
+							<img src="{% static 'assets/images/post/pic8.png' %}" alt="image">
+						</a>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="profile-tab-pane3" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+					<div class="dz-lightgallery" id="lightgallery-2">
+						<a class="gallery-box" src="{% static 'assets/images/post/pic4.png' %}" data-lg-id="21af9f9a-1551-4971-8c44-e119a2ca43ed">
+							<img src="{% static 'assets/images/post/pic4.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic3.png' %}" data-lg-id="d22e4f4e-c542-4391-b6bc-46b20e9be47f">
+							<img src="{% static 'assets/images/post/pic3.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic2.png' %}" data-lg-id="b43b0904-ab45-477e-a11b-5127fdccd985">
+							<img src="{% static 'assets/images/post/pic2.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic1.png' %}" data-lg-id="0736eb0c-7030-4e24-865e-51100e5a62b7">
+							<img src="{% static 'assets/images/post/pic1.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic9.png' %}" data-lg-id="1931a322-b873-4b40-98d2-6f76ba7232ce">
+							<img src="{% static 'assets/images/post/pic9.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic12.png' %}" data-lg-id="d5ebe43b-d220-4c7f-b85b-030cd2ef5072">
+							<img src="{% static 'assets/images/post/pic12.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic5.png' %}" data-lg-id="7444d3ae-2bce-4812-84ee-c52908ff4d4d">
+							<img src="{% static 'assets/images/post/pic5.png' %}" alt="image">
+						</a>
+						<a class="gallery-box" src="{% static 'assets/images/post/pic6.png' %}" data-lg-id="4887ea48-a217-4fc1-a25c-e6d7a04551c4">
+							<img src="{% static 'assets/images/post/pic6.png' %}" alt="image">
+						</a>
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</div>
+</div>
+<!-- Page Content End-->
+
+
+{% endblock content %}
+
+

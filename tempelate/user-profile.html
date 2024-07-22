@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="page-wraper header-fixed">
+    
+    <!-- Preloader -->
+    <div id="preloader" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader end-->
+    
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="main-bar">
+				<div class="left-content">
+					<a href="javascript:void(0);" class="back-btn">
+						<i class="fa-solid fa-arrow-left"></i>
+					</a>
+					<h4 class="title mb-0">User Profile</h4>
+				</div>
+				<div class="mid-content">
+				</div>
+				<div class="right-content">
+				</div>
+			</div>
+		</div>
+	</header>
+    <!-- Header End -->
+	
+    <!-- Page Content -->
+    <div class="page-content">
+        <div class="container profile-area">
+            <div class="profile">
+                <div class="main-profile">
+					<div class="left-content">
+						<span>@barian__23</span>
+						<h5 class="mt-1">Brian Harahap</h5>
+						<h6 class="text-primary font-w400">Designer</h6>
+					</div>
+					<div class="right-content">
+						<div class="upload-box">
+							<img src="{% static 'assets/images/stories/pic2.png' %}" alt="/">
+						</div>
+					</div>
+				</div>
+				<ul class="list-button">
+					<li>
+						<a href="javascript:void(0);">Following</a>
+					</li>
+					<li>
+						<a href="{% url 'messages-detail' %}">Message</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><svg id="Layer_1" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><g fill="rgb(0,0,0)"><path d="m20 6a6 6 0 1 0 -6 6 6.006 6.006 0 0 0 6-6zm-10 0a4 4 0 1 1 4 4 4 4 0 0 1 -4-4z"></path><path d="m17 14h-6a7.008 7.008 0 0 0 -7 7v2a1 1 0 0 0 2 0v-2a5.006 5.006 0 0 1 5-5h6a5.006 5.006 0 0 1 5 5v2a1 1 0 0 0 2 0v-2a7.008 7.008 0 0 0 -7-7z"></path><path d="m4 7a1 1 0 0 0 -1 1v2h-2a1 1 0 0 0 0 2h2v2a1 1 0 0 0 2 0v-2h2a1 1 0 0 0 0-2h-2v-2a1 1 0 0 0 -1-1z"></path></g></svg></a>
+					</li>
+				</ul>
+            </div>			
+			<div class="contant-section">
+				<div class="social-bar">
+					<ul>
+						<li class="active">
+							<a href="javascript:void(0);">
+								<h4>52</h4>	
+								<span>Post</span>
+							</a>
+						</li>
+						<li>
+							<a href="{% url 'social-friends' %}">
+								<h4>250</h4>	
+								<span>Following</span>
+							</a>
+						</li>
+						<li>
+							<a href="{% url 'social-friends' %}">
+								<h4>4.5k</h4>	
+								<span>Followers</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="title-bar my-2">
+					<h6 class="mb-0">My Posts</h6>
+					<div class="dz-tab style-2">
+						<ul class="nav nav-tabs" id="myTab3" role="tablist">
+						  <li class="nav-item" role="presentation">
+							<button class="nav-link active" id="home-tab3" data-bs-toggle="tab" data-bs-target="#home-tab-pane3" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10 3H3V10H10V3Z" stroke="var(--primary)" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M21 3H14V10H21V3Z" stroke="var(--primary)" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M21 14H14V21H21V14Z" stroke="var(--primary)" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M10 14H3V21H10V14Z" stroke="var(--primary)" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</button>
+						  </li>
+						  <li class="nav-item" role="presentation">
+							<button class="nav-link" id="profile-tab3" data-bs-toggle="tab" data-bs-target="#profile-tab-pane3" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false" tabindex="-1">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8 6H21" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M8 12H21" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M8 18H21" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M3 6H3.01" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M3 12H3.01" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M3 18H3.01" stroke="var(--primary)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</button>
+						  </li>
+					</ul></div>
+				</div>
+				<div class="tab-content" id="myTabContent3">
+					<div class="tab-pane fade show active" id="home-tab-pane3" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+						<div class="dz-lightgallery style-2" id="lightgallery">
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic1.png' %}" data-lg-id="fbf2cd0b-97bb-4d89-9f47-6eabd3b1d565">
+								<img src="{% static 'assets/images/post/pic1.png' %}" alt="image">
+							</a>
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic2.png' %}" data-lg-id="7b2c5591-523a-459e-85e2-23a7d70ed638">
+								<img src="{% static 'assets/images/post/pic2.png' %}" alt="image">
+							</a>
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic3.png' %}" data-lg-id="8ff25f7f-4e5d-480f-8dc7-6a9cf9a1cb92">
+								<img src="{% static 'assets/images/post/pic3.png' %}" alt="image">
+							</a>
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic4.png' %}" data-lg-id="4f787477-7106-48ed-b7cb-012eb5a1c5b6">
+								<img src="{% static 'assets/images/post/pic4.png' %}" alt="image">
+							</a>
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic5.png' %}" data-lg-id="47320fc6-51ba-4c26-b173-1712e172bf3c">
+								<img src="{% static 'assets/images/post/pic5.png' %}" alt="image">
+							</a>
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic6.png' %}" data-lg-id="14e44bf2-bc4f-430a-8c24-4fbf6c9d7442">
+								<img src="{% static 'assets/images/post/pic6.png' %}" alt="image">
+							</a>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="profile-tab-pane3" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+						<div class="dz-lightgallery" id="lightgallery-2">
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic4.png' %}" data-lg-id="ded51073-362b-4014-b509-d778e920568a">
+								<img src="{% static 'assets/images/post/pic4.png' %}" alt="image">
+							</a>
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic3.png' %}" data-lg-id="822199ea-25ab-47f9-9643-465ec370fb43">
+								<img src="{% static 'assets/images/post/pic3.png' %}" alt="image">
+							</a>
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic2.png' %}" data-lg-id="086b10f0-c909-41a1-97c4-d3edfc77e2a3">
+								<img src="{% static 'assets/images/post/pic2.png' %}" alt="image">
+							</a>
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic1.png' %}" data-lg-id="7622c627-b8d5-4874-8220-1e3951bb0b4e">
+								<img src="{% static 'assets/images/post/pic1.png' %}" alt="image">
+							</a>
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic9.png' %}" data-lg-id="3e83a6b0-aebc-4d94-95a4-899283595841">
+								<img src="{% static 'assets/images/post/pic9.png' %}" alt="image">
+							</a>
+							<a class="gallery-box" href="{%  static 'assets/images/post/pic12.png' %}" data-lg-id="0aeca8b4-eef4-4eae-92ae-058480d21142">
+								<img src="{% static 'assets/images/post/pic12.png' %}" alt="image">
+							</a>
+						</div>
+					</div>
+				</div>	
+			</div>	
+        </div>
+    </div>
+    <!-- Page Content End-->
+    
+</div>
+
+{% endblock content %}

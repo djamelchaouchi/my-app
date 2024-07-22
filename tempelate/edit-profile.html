@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}  
+   
+
+<!-- Preloader -->
+<div id="preloader">
+	<div class="spinner"></div>
+</div>
+<!-- Preloader end-->
+
+<!-- Header -->
+<header class="header bg-white">
+	<div class="container">
+		<div class="main-bar">
+			<div class="left-content">
+				<a href="javascript:void(0);" class="back-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+				</a>
+				<h4 class="title mb-0">Edit profile</h4>
+			</div>
+			<div class="mid-content">
+			</div>
+			<div class="right-content">
+				<a href="javascript:void(0);" class="text-dark font-20">						
+					<i class="fa-solid fa-check"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- Header End -->
+
+<!-- Page Content -->
+<div class="page-content">
+	<div class="container">
+		<div class="edit-profile">
+			<div class="profile-image">
+				<div class="media media-100 rounded-circle">
+					<img src="{% static 'assets/images/stories/pic3.png' %}" alt="/">	
+				</div>
+				<a href="javascript:void(0);">Change profile photo</a>
+			</div>
+			<form>
+				<div class="mb-3 input-group input-mini">
+					<input type="text" class="form-control" placeholder="Name">
+				</div>
+				<div class="mb-3 input-group input-mini">
+					<input type="text" class="form-control" placeholder="Username">
+				</div>
+				<div class="mb-3 input-group input-mini">
+					<input type="url" class="form-control" placeholder="Website">
+				</div>
+				<div class="mb-3 input-group input-mini">
+					<input type="text" class="form-control" placeholder="Bio">
+				</div>
+			</form>
+		</div>
+		<ul class="link-list">
+			<li>
+				<a href="javascript:void(0);">Add Link</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);">Switch to professional account</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);">Create avatar</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);">Personal information settings</a>
+			</li>
+		</ul>	
+	</div>
+</div>
+<!-- Page Content End-->
+{% endblock content %}
+

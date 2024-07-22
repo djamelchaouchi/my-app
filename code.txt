@@ -1,0 +1,51 @@
+npx create-next-app@latest
+
+
+npm create vite@latest      npm run dev
+npx create-react-app my-app     npm start
+
+
+
+.\venv\Scripts\activate && python manage.py runserver
+python -m venv .\venv
+pip install django
+django-admin startproject aaaaa .
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py startapp accounts
+python manage.py collectstatic
+python manage.py runserver
+
+pip freeze > requirements.txt
+
+pip install requirements.txt
+
+# This is used for
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+src="src="{% static '
+
+.jpg".jpg' %}"
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+{% endblock content %}
+
+
+{% if user.is_authenticated %}
+{% block content%}
+{% endblock content %}
+{% include 'menubar.html' %}
+{% else %}
+<div class="d-flex align-items-center justify-content-center">
+  <span  class="text-light text-center d-block">Don’t have an account?</span>
+  <a href="{% url 'register' %}" class="btn-link d-block ms-3 text-underline"> register here</a>
+</div>
+{% endif %}
